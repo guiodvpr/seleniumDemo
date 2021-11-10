@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-10-14T17:28:33.236Z",
+    "end": "2021-10-14T17:30:03.437Z",
+    "duration": 90201,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6f1634d7-a733-4e33-98ba-b6d81203af66",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dc1309de-8f50-4bdb-a42b-5b9eb8995bf1",
+          "title": "add todo tests",
+          "fullFile": "C:\\Users\\webgu\\Desktop\\seleniumDemo\\test\\firstTest.js",
+          "file": "\\test\\firstTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sata",
+              "fullTitle": "add todo tests Sata",
+              "timedOut": null,
+              "duration": 81564,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Launch the browser\n        let driver = await new Builder().forBrowser(\"firefox\").build();\n        //Navigate to our application\n        await driver.get(\"https://lambdatest.github.io/sample-todo-app/\")\n        //add a todo\n        await driver.findElement(By.id(\"sampletodotext\")).sendKeys(\"Learn Selenium\", Key.RETURN);\n        //asert\n        let todoText = await driver\n        .findElement(By.xpath(\"//li[last()]\"))\n        .getText()\n        .then(function (value) {\n            return value\n        });\n        //asert using chai should\n        todoText.should.equal(\"Learn Selenium\");\n        //Close the browser\n            await driver.quit();",
+              "err": {},
+              "uuid": "e2af4058-0d91-4c7f-84d9-fc857fc19a80",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e2af4058-0d91-4c7f-84d9-fc857fc19a80"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 81564,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "ea9b586d-0598-4c78-9372-630d01302bd9",
+          "title": "add another todo tests",
+          "fullFile": "C:\\Users\\webgu\\Desktop\\seleniumDemo\\test\\secondTest.js",
+          "file": "\\test\\secondTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Saata",
+              "fullTitle": "add another todo tests Saata",
+              "timedOut": null,
+              "duration": 80826,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Launch the browser\n        let driver = await new Builder().forBrowser(\"firefox\").build();\n        //Navigate to our application\n        await driver.get(\"https://lambdatest.github.io/sample-todo-app/\")\n        //add a todo\n        await driver.findElement(By.id(\"sampletodotext\")).sendKeys(\"Learn Selenium\", Key.RETURN);\n        //asert\n        let todoText = await driver.findElement(By.xpath(\"//li[last()]\")).getText().then(function (value) {\n            return value\n        });\n        //asert using chai should\n        todoText.should.equal(\"Learn Selenium\");\n        //Close the browser\n            await driver.quit();",
+              "err": {},
+              "uuid": "ab8d2ce2-78fa-4b3d-a92a-17949e740f95",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Saata2",
+              "fullTitle": "add another todo tests Saata2",
+              "timedOut": null,
+              "duration": 7146,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Launch the browser\n        let driver = await new Builder().forBrowser(\"firefox\").build();\n        //Navigate to our application\n        await driver.get(\"https://lambdatest.github.io/sample-todo-app/\")\n        //add a todo\n        await driver.findElement(By.id(\"sampletodotext\")).sendKeys(\"Learn Selenium\", Key.RETURN);\n        //asert\n        let todoText = await driver.findElement(By.xpath(\"//li[last()]\")).getText().then(function (value) {\n            return value\n        });\n        //asert using chai should\n        todoText.should.equal(\"Learn javascript\");\n        //Close the browser\n            await driver.quit();",
+              "err": {
+                "message": "AssertionError: expected 'Learn Selenium' to equal 'Learn javascript'",
+                "estack": "AssertionError: expected 'Learn Selenium' to equal 'Learn javascript'\n    at Context.<anonymous> (test\\secondTest.js:75:25)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "diff": "- Learn Selenium\n+ Learn javascript\n"
+              },
+              "uuid": "0607079f-da3e-4791-b331-13f109e87437",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ab8d2ce2-78fa-4b3d-a92a-17949e740f95"
+          ],
+          "failures": [
+            "0607079f-da3e-4791-b331-13f109e87437"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 87972,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.1.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
